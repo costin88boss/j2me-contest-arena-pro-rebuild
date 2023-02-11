@@ -1,0 +1,35 @@
+apply plugin: 'java'
+defaultTasks("jar")
+
+final String mainClass = "com.elkware.midp.games.colorng.arena.high.a"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes 'MicroEdition-Configuration' : 'CLDC-1.0'
+        attributes 'MicroEdition-Profile' : 'MIDP-2.0'
+        attributes 'MIDlet-1' : 'Contest_Arena_Pro,/icon.png,com.elkware.midp.games.colorng.arena.high.a'
+        attributes 'MIDlet-Data-Size' : '1024'
+        attributes 'MIDlet-Description' : 'Contest_Arena_Pro'
+        attributes 'MIDlet-Name' : 'Contest_Arena_Pro'
+        attributes 'MIDlet-Vendor' : 'Siemens AG and elkware GmbH'
+        attributes 'MIDlet-Info-URL' : 'http://wap.my-siemens.com'
+        attributes 'MIDlet-Version' : '1.1.1LG3'
+        attributes 'MIDlet-Icon' : '/icon.png'
+        attributes 'MIDlet-Icon' : 'javax.microedition.midlet.MIDlet.platformRequest,com.siemens.mp.io.File.readwrite,javax.microedition.io.Connector.file.read,javax.microedition.io.Connector.file.write,javax.microedition.io.Connector.http,javax.microedition.io.PushRegistry,javax.microedition.io.Connector.sms,javax.wireless.messaging.sms.receive,javax.wireless.messaging.sms.send,javax.microedition.io.Connector.mms,javax.wireless.messaging.mms.receive,javax.wireless.messaging.mms.send'
+    }
+}

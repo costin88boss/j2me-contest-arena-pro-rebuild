@@ -1,0 +1,10 @@
+search for " // Non-existent function " to get where something in libraries doesn't exist
+
+Controls:
+Q and W for left and right softkeys.
+Arrow keys for nav, unless phone is set to "Standard", when arrow keys become 2, 4, 6, and 8.
+Numbers work as expected, the number pad is inverted (123 swap with 789, like a phone)
+E and R are alternatives to * and #.
+Enter functions as the Fire key or 5 on "Standard" mode
+ESC brings up the settings menu
+In the AWT frontend (freej2me.jar) Ctrl+C takes a screenshot and +/- can be used to control the window scaling factor
